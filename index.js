@@ -9,7 +9,7 @@ connectDB();
 
 const app = express();
 const port = process.env.PORT;
-
+app.use(express.json());
 app.use('/api/users', userRoute);
 app.use(notfound);
 app.use(errorHandler);
